@@ -1,0 +1,30 @@
+<template>
+  <ls-container title="{{title}}" class="{{class}}">
+    <div class="content">
+      <div class="block"></div>
+    </div>
+  </ls-container>
+</template>
+
+<script>
+  export default {
+    name: 'App',
+    components: {
+
+    }
+  }
+</script>
+
+<style lang="scss">
+  {{#if class}}
+  .{{class}} {
+  {{/if}}
+    .content {
+      .block + .block {
+        margin-left: 20px;
+      }
+    }
+  {{#if class}}
+  }
+  {{/if}}
+</style>
